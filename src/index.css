@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Laudano Barbearia Design System - Dourado, Preto e Branco */
+
+@layer base {
+  :root {
+    /* Laudano Brand Colors */
+    --brand-gold: 51 100% 50%;        /* #FFD700 */
+    --brand-gold-dark: 45 100% 45%;   /* Darker gold */
+    --brand-gold-light: 51 100% 90%;  /* Light gold */
+    --brand-black: 0 0% 0%;           /* #000000 */
+    --brand-white: 0 0% 100%;         /* #FFFFFF */
+    --brand-gray: 0 0% 20%;           /* Dark gray */
+    --brand-gray-light: 0 0% 95%;     /* Light gray */
+
+    /* Base Theme */
+    --background: var(--brand-white);
+    --foreground: var(--brand-black);
+
+    --card: var(--brand-white);
+    --card-foreground: var(--brand-black);
+
+    --popover: var(--brand-white);
+    --popover-foreground: var(--brand-black);
+
+    --primary: var(--brand-gold);
+    --primary-foreground: var(--brand-black);
+
+    --secondary: var(--brand-gray-light);
+    --secondary-foreground: var(--brand-black);
+
+    --muted: var(--brand-gray-light);
+    --muted-foreground: var(--brand-gray);
+
+    --accent: var(--brand-gold-light);
+    --accent-foreground: var(--brand-black);
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: var(--brand-white);
+
+    --border: 0 0% 90%;
+    --input: 0 0% 95%;
+    --ring: var(--brand-gold);
+
+    --radius: 12px;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-black)), hsl(var(--brand-gray)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--brand-gold)), hsl(var(--brand-gold-dark)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--brand-white)), hsl(var(--brand-gray-light)));
+
+    /* Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--brand-black) / 0.1);
+    --shadow-gold: 0 10px 30px -10px hsl(var(--brand-gold) / 0.3);
+    --shadow-card: 0 4px 20px -8px hsl(var(--brand-black) / 0.15);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: var(--brand-black);
+    --foreground: var(--brand-white);
+    --card: var(--brand-gray);
+    --card-foreground: var(--brand-white);
+    --popover: var(--brand-gray);
+    --popover-foreground: var(--brand-white);
+    --secondary: var(--brand-gray);
+    --secondary-foreground: var(--brand-white);
+    --muted: var(--brand-gray);
+    --muted-foreground: 0 0% 70%;
+    --accent: var(--brand-gray);
+    --accent-foreground: var(--brand-white);
+    --border: var(--brand-gray);
+    --input: var(--brand-gray);
+    --ring: var(--brand-gold);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
